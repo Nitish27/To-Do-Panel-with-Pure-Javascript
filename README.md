@@ -1,2 +1,2 @@
-# To-Do-Task-Panel-with-Pure-Javascript
+# To-Do Task Manager with Pure-Javascript
 Create To-Do task manager with pure Javascript
