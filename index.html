@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Tripoto Task Cards</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="assets/css/style.css">
+		<!--google font style-->
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,600,700,800,300' rel='stylesheet' type='text/css'>
+		<!--font-family: 'Open Sans', sans-serif;-->
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+	</head>
+	<body>
+		<div class="wrapper">
+			<header>
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-6">
+							<h1 class="page-title">All Projects</h1>
+						</div>
+						<div class="col-sm-6">
+							<ul class="header-list list-inline text-right">
+								<li>
+									<button class="btn btn-primary" id="add-status" data-toggle="modal" data-target="#task-model">
+										<i class="fa fa-plus"></i> Add New Status
+									</button>
+								</li>
+								<li>
+									<button class="btn btn-primary" id="delete-cards">
+										<i class="fa fa-trash-o"></i> Delete All Cards
+									</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</header>
+			<div class="page-content">
+				<div class="container">
+					<div class="row" id="task-row">
+						<div id="status-cols">
+							<div class="col-sm-3">
+								<div class="task-bar">
+									<div class="task-heading clearfix">
+										<h3 class="pull-left no-margin">Assigned Tasks</h3>
+										<span class="dropdown">
+											<a href="javascript:;" class="pull-right dropdown-toggle" data-toggle="dropdown"><i class="fa fa-cog"></i>
+											</a>
+											<ul class="card-action dropdown-menu">
+												<li>
+													<button class="add-card">Add Task</button>
+												</li>
+												<li>
+													<button class="delete-task-list">Delete All Tasks</button>
+												</li>
+												<li>
+													<button class="delete-col">Delete List</button>
+												</li>
+											</ul>
+										</span>
+									</div>
+									<div class="task-list-div">
+										<ul class="task-list connected" data-draggable="target">
+											<li>
+												<p>Conversion of profile page on web and mobile app2</p>
+												<button class="edit-task pull-left">
+													<i class="fa fa-pencil-square-o"></i>
+												</button>
+												<button class="delete-task pull-right">
+													<i class="fa fa-trash-o"></i>
+												</button>
+											</li>
+											<li>
+												<p>Conversion of profile page on web and mobile app</p>
+												<button class="edit-task pull-left">
+													<i class="fa fa-pencil-square-o"></i>
+												</button>
+												<button class="delete-task pull-right">
+													<i class="fa fa-trash-o"></i>
+												</button>
+											</li>
+											<li>
+												<p>Conversion of profile page on web and mobile app</p>
+												<button class="edit-task pull-left">
+													<i class="fa fa-pencil-square-o"></i>
+												</button>
+												<button class="delete-task pull-right">
+													<i class="fa fa-trash-o"></i>
+												</button>
+											</li>
+										</ul>
+										<div class="add-task-field clearfix">
+											<textarea name="task" id="task" class="form-control" rows="3"></textarea>
+											<button type="submit" class="btn btn-success save-task btn-sm pull-left">save</button>
+											<button class="btn btn-danger pull-right btn-sm hide-form"><i class="fa fa-close"></i></button>
+										</div>
+										<button class="btn btn-primary show-form">Add Task</button>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-3">
+								<div class="task-bar">
+									<div class="task-heading clearfix">
+										<h3 class="pull-left no-margin">Pending Tasks</h3>
+										<span class="dropdown">
+											<a href="javascript:;" class="pull-right dropdown-toggle" data-toggle="dropdown"><i class="fa fa-cog"></i>
+											</a>
+											<ul class="card-action dropdown-menu">
+												<li>
+													<button class="add-card">Add card</button>
+												</li>
+												<li>
+													<button class="delete-task-list">Delete All Tasks</button>
+												</li>
+												<li>
+													<button class="delete-col">Delete List</button>
+												</li>
+											</ul>
+										</span>
+									</div>
+									<div class="task-list-div">
+										<ul class="task-list connected" data-draggable="target">
+											<li>
+												<p>Conversion of profile page on web and mobile app</p>
+												<button class="edit-task pull-left">
+													<i class="fa fa-pencil-square-o"></i>
+												</button>
+												<button class="delete-task pull-right">
+													<i class="fa fa-trash-o"></i>
+												</button>
+											</li>
+											<li>
+												<p>Conversion of profile page on web and mobile app</p>
+												<button class="edit-task pull-left">
+													<i class="fa fa-pencil-square-o"></i>
+												</button>
+												<button class="delete-task pull-right">
+													<i class="fa fa-trash-o"></i>
+												</button>
+											</li>
+										</ul>
+										<div class="add-task-field clearfix">
+											<textarea name="task" id="task" class="form-control" rows="3"></textarea>
+											<button type="submit" class="btn btn-success save-task btn-sm pull-left">save</button>
+											<button class="btn btn-danger pull-right btn-sm hide-form"><i class="fa fa-close"></i></button>
+										</div>
+										<button class="btn btn-primary show-form">Add Task</button>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-3">
+								<div class="task-bar">
+									<div class="task-heading clearfix">
+										<h3 class="pull-left no-margin">Completed Tasks</h3>
+										<span class="dropdown">
+											<a href="javascript:;" class="pull-right dropdown-toggle" data-toggle="dropdown"><i class="fa fa-cog"></i>
+											</a>
+											<ul class="card-action dropdown-menu">
+												<li>
+													<button class="add-card">Add card</button>
+												</li>
+												<li>
+													<button class="delete-task-list">Delete All Tasks</button>
+												</li>
+												<li>
+													<button class="delete-col">Delete List</button>
+												</li>
+											</ul>
+										</span>
+									</div>
+									<div class="task-list-div">
+										<ul class="task-list connected" data-draggable="target">
+											<li>
+												<p>Conversion of profile page on web and mobile app</p>
+												<button class="edit-task pull-left">
+													<i class="fa fa-pencil-square-o"></i>
+												</button>
+												<button class="delete-task pull-right">
+													<i class="fa fa-trash-o"></i>
+												</button>
+											</li>
+											<li>
+												<p>Conversion of profile page on web and mobile app</p>
+												<button class="edit-task pull-left">
+													<i class="fa fa-pencil-square-o"></i>
+												</button>
+												<button class="delete-task pull-right">
+													<i class="fa fa-trash-o"></i>
+												</button>
+											</li>
+										</ul>
+										<div class="add-task-field clearfix">
+											<textarea name="task" id="task" class="form-control" rows="3"></textarea>
+											<button type="submit" class="btn btn-success save-task btn-sm pull-left">save</button>
+											<button class="btn btn-danger pull-right btn-sm hide-form"><i class="fa fa-close"></i></button>
+										</div>
+										<button class="btn btn-primary show-form">Add Task</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Modal for Add New Staus -->
+		<div class="modal fade" id="task-model" tabindex="-1" role="dialog">
+			<div class="modal-dialog">
+			    <div class="modal-content">
+			      	<div class="modal-header">
+			        	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			        	<h4 class="modal-title">Add New Task Title</h4>
+			      	</div>
+			      	<div class="modal-body clearfix">
+			        	<textarea name="new-task" class="form-control new-task" id="new-task" cols="30" rows="10"></textarea>
+						<button id="save-new-task" class="btn btn-primary pull-right">Save</button>
+			      	</div>
+			    </div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div>
+		<!-- End Modal -->
+		<!--jquary min js-->
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+		<script src="assets/js/jquery.sortable.js"></script>
+		<script type="text/javascript" src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+		<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<script src="http://tinymce.cachefly.net/4.3/tinymce.min.js"></script>
+		<script>tinymce.init({ selector:'.new-task' });</script>
+		<script type="text/javascript">
+
+			var tasks = {
+				showform: function() {
+					this.previousElementSibling.style.display = 'block';
+				},
+
+				hideform: function() {
+					this.parentNode.style.display = 'none';
+					this.parentNode.classList.remove("show");
+				},
+
+				addcard: function() {
+					var parent = this.parentNode.parentNode.parentNode.parentNode.parentNode;
+					var child = parent.getElementsByClassName('add-task-field');
+					
+					for (var i=0;i<child.length;i+=1){
+					  child[i].style.display = 'block';
+					}
+
+				},
+
+				delete_task_list: function() {
+					var parent = this.parentNode.parentNode.parentNode.parentNode.parentNode;
+					var el = parent.querySelector('.task-list');
+					el.innerHTML = '';
+				},
+
+				add: function() {
+					var ul = this.parentElement.previousElementSibling;
+					var li = document.createElement("li");
+					li.innerHTML = '<p>'+ this.previousElementSibling.value +'</p>';
+
+					var span1 = document.createElement('button');
+				        span1.className = "edit-task pull-left";
+				        span1.innerHTML = "<i class='fa fa-pencil-square-o'></i>";
+				        //span1.onclick = tasks.submit_edit_task;
+
+					var span = document.createElement('button');
+				        span.className = "delete-task pull-right";
+				        span.innerHTML = "<i class='fa fa-trash-o'></i>";
+				        span.onclick = tasks.delete;
+
+					this.previousElementSibling.value = "";
+	  				ul.appendChild(li).appendChild(span);
+
+	  				insertBefore(span1, span);
+
+	  				for(var i=0;i<edit_task.length;i++){
+				        edit_task[i].addEventListener("click", tasks.edit , false);
+				    }
+
+	  				for(var i=0;i<submit_edit.length;i++){
+				        submit_edit[i].addEventListener("click", tasks.submit_edit_task , false);
+				    }
+	  				
+				},
+
+				edit: function() {
+					var li = this.parentNode;
+					//console.log(li);
+					var text = this.previousElementSibling.innerHTML;
+					
+					var newEl = document.createElement('div');
+						newEl.className = 'add-task-field clearfix show';
+						newEl.innerHTML = '<textarea name="task" id="task" class="form-control" rows="3">'+ text +'</textarea><button type="submit" class="btn btn-success edit-task-submit btn-sm pull-left">save</button><button class="btn btn-danger pull-right btn-sm hide-form"><i class="fa fa-close"></i></button>';
+						
+						var ref = li;
+						insertAfter(newEl, ref);
+						
+						for(var i=0;i<submit_edit.length;i++){
+					        submit_edit[i].addEventListener("click", tasks.submit_edit_task , false);
+					    }
+
+					    for(var i=0;i<hide_form.length;i++){
+					        hide_form[i].addEventListener("click", tasks.hideform , false);
+					    }
+				},
+
+				submit_edit_task: function() {
+					var val = this.previousElementSibling.value;
+					var li = this.parentNode.previousElementSibling;
+					var parent = this.parentNode;
+					var para = li.querySelector('p');
+					para.innerHTML = val;
+					parent.remove();
+
+				},
+
+				delete: function() {
+					this.parentNode.remove();
+				},
+
+				delete_column: function() {
+					var parent = this.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode;
+					parent.remove();
+				},
+
+				setting: function() {
+					console.log(this);
+				}
+			};
+
+			function insertAfter(el, referenceNode) {
+			    referenceNode.parentNode.insertBefore(el, referenceNode.nextSibling);
+			}
+
+			function insertBefore(el, referenceNode) {
+			    referenceNode.parentNode.insertBefore(el, referenceNode);
+			}
+
+			var add_card = document.getElementsByClassName('add-card');
+			var delete_task_list = document.getElementsByClassName('delete-task-list');
+			var show_form = document.getElementsByClassName('show-form');
+			var hide_form = document.getElementsByClassName('hide-form');
+			var add_status = document.getElementsByClassName('add-status');
+			var save_task = document.getElementsByClassName('save-task');
+			var edit_task = document.getElementsByClassName('edit-task');
+			var submit_edit = document.getElementsByClassName('edit-task-submit');
+			var delete_task = document.getElementsByClassName('delete-task');
+			var task_list = document.getElementsByClassName('task-list');
+			var delete_col = document.getElementsByClassName('delete-col');
+
+			for(var i=0;i<delete_task_list.length;i++){
+		        delete_task_list[i].addEventListener("click", tasks.delete_task_list , false);
+		    }
+
+		    for(var i=0;i<add_card.length;i++){
+		        add_card[i].addEventListener("click", tasks.addcard , false);
+		    }
+
+			for(var i=0;i<save_task.length;i++){
+		        save_task[i].addEventListener("click", tasks.add , false);
+		    }
+
+		    for(var i=0;i<edit_task.length;i++){
+		        edit_task[i].addEventListener("click", tasks.edit , false);
+		    }
+
+		    for(var i=0;i<submit_edit.length;i++){
+		        submit_edit[i].addEventListener("click", tasks.submit_edit_task , false);
+		    }
+
+		    for(var i=0;i<delete_task.length;i++){
+		        delete_task[i].addEventListener("click", tasks.delete , false);
+		    }
+
+		    for(var i=0;i<show_form.length;i++){
+		        show_form[i].addEventListener("click", tasks.showform , false);
+		    }
+
+		    for(var i=0;i<hide_form.length;i++){
+		        hide_form[i].addEventListener("click", tasks.hideform , false);
+		    }
+
+		    for(var i=0;i<delete_col.length;i++){
+		        delete_col[i].addEventListener("click", tasks.delete_column , false);
+		    }
+
+		    document.getElementById('save-new-task').onclick = function(){
+		    	var html = tinyMCE.activeEditor.getContent();
+		    	var name = html.replace(/<[^>]*>/g, "");
+		    	tinyMCE.activeEditor.setContent('');
+
+		    	if (name.length > 0) {
+		    		$(function(){
+			    		$('#task-model').modal('hide');
+			    	})
+		    		var row = document.getElementById("task-row");
+			    	var col = document.createElement("div");
+			    		col.className = 'col-sm-3';
+			    	var taskbar = document.createElement("div");
+			    		taskbar.className = 'task-bar';
+			    		taskbar.innerHTML = '<div class="task-heading clearfix"><h3 class="pull-left no-margin">'+ name +'</h3><span class="dropdown"><a href="" class="pull-right dropdown-toggle" data-toggle="dropdown"><i class="fa fa-cog"></i></a><ul class="card-action dropdown-menu"><li><button class="add-card">Add card</button></li><li><button class="delete-task-list">Delete All Tasks</button></li><li><button class="delete-col">Delete List</button></li></ul></span></div><div class="task-list-div"><ul class="task-list connected" data-draggable="target"></ul><div class="add-task-field clearfix"><textarea name="task" id="task" class="form-control" rows="3"></textarea><button type="submit" class="btn btn-success save-task btn-sm pull-left">save</button><button class="btn btn-danger pull-right btn-sm hide-form"><i class="fa fa-close"></i></button></div><button class="btn btn-primary show-form">Add Task</button></div>';
+
+			    	row.appendChild(col).appendChild(taskbar);
+			    	
+			    	$(function() {
+			    		$( ".connected" ).sortable({
+					      connectWith: ".connected"
+					    }).disableSelection();
+				    })
+
+			    	for(var i=0;i<delete_task_list.length;i++){
+				        delete_task_list[i].addEventListener("click", tasks.delete_task_list , false);
+				    }
+
+			    	for(var i=0;i<add_card.length;i++){
+				        add_card[i].addEventListener("click", tasks.addcard , false);
+				    }
+
+			    	for(var i=0;i<save_task.length;i++){
+				        save_task[i].addEventListener("click", tasks.add , false);
+				    }
+
+				    for(var i=0;i<delete_task.length;i++){
+				        delete_task[i].addEventListener("click", tasks.delete , false);
+				    }
+			    	for(var i=0;i<show_form.length;i++){
+				        show_form[i].addEventListener("click", tasks.showform , false);
+				    }
+
+			    	for(var i=0;i<hide_form.length;i++){
+				        hide_form[i].addEventListener("click", tasks.hideform , false);
+				    }
+
+				    for(var i=0;i<delete_col.length;i++){
+					    delete_col[i].addEventListener("click", tasks.delete_column , false);
+					}
+		    		
+		    	}
+		    	else{
+		    		alert('plz enter task name');
+		    	}
+		    	
+		    	
+		    }
+
+		    document.getElementById("delete-cards").onclick = function(){
+		    	var row = document.getElementById("status-cols");
+		    	row.remove();
+		    }
+
+
+		    $(function() {
+	    		$( ".connected" ).sortable({
+			      connectWith: ".connected"
+			    }).disableSelection();
+	  			// $('.connected').sortable({
+				// 	connectWith: '.connected'
+				// });
+		    })
+		</script>
+	</body>
+</html>
